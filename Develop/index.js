@@ -15,5 +15,10 @@ inquirer.prompt([
 	{
 		message:"Enter team's name",
 		name: "name"
+	},
+	{
+		message:"Enter email",
+		name: "email"
 	}
+
 ])
