@@ -34,8 +34,37 @@ inquirer.prompt([
 		name: "id",
 		message:"Enter new team member's id",
 	},
+	{
+		type: "input",
+		name: "email",
+		message:"Enter new team member's email address",
+	},
 ])
-.then(function roleProperty(name, role, id){
+.then(function roleProperty({name, role, id, email}){
 	// Role specific properties
-	console.log(name, role, id);
+	if (role === "Manager"){
+		inquirer.prompt(
+			{
+				type: "input",
+				name: "officeNumber",
+				message:"Enter new team member's office number",
+			}
+		)
+	} else if (role === "Intern"){
+		inquirer.prompt(
+			{
+				type: "input",
+				name: "school",
+				message:"Enter new team member's school name",
+			}
+		)
+	} else {
+		inquirer.prompt(
+			{
+				type: "input",
+				name: "github",
+				message:"Enter new team member's link to Github profile",
+			}
+		)
+	}
 })
