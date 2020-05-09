@@ -2,7 +2,7 @@
 // const Engineer = require("./lib/Engineer");
 // const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-console.log(inquirer);
+// console.log(inquirer);
 // const path = require("path");
 // const fs = require("fs");
 // ​
@@ -11,14 +11,31 @@ console.log(inquirer);
 // ​
 // const render = require("./lib/htmlRenderer");
 
+
+// Display initial prompts to New Member
 inquirer.prompt([
 	{
-		message:"Enter team's name",
-		name: "name"
+		type: "input",
+		name: "name",
+		message:"Enter new team member's name"
 	},
 	{
-		message:"Enter email",
-		name: "email"
-	}
-
+		type: "list",
+		name: "role",
+		message:"Select new team member's role",
+		choices: [
+			"Manager",
+			"Engineer",
+			"Intern"
+		]
+	},
+	{
+		type: "input",
+		name: "id",
+		message:"Enter new team member's id",
+	},
 ])
+.then(function roleProperty(name, role, id){
+	// Role specific properties
+	console.log(name, role, id);
+})
