@@ -1,6 +1,6 @@
-// const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 // console.log(inquirer);
 // const path = require("path");
@@ -10,7 +10,6 @@ const inquirer = require("inquirer");
 // const outputPath = path.join(OUTPUT_DIR, "team.html");
 // ​
 // const render = require("./lib/htmlRenderer");
-
 
 // Display initial prompts to New Member
 inquirer.prompt([
@@ -40,31 +39,57 @@ inquirer.prompt([
 		message:"Enter new team member's email address",
 	},
 ])
-.then(function roleProperty({name, role, id, email}){
+.then(function newMember({name, role, id, email}){
 	// Role specific properties
+	let roleProperty;
 	if (role === "Manager"){
-		inquirer.prompt(
-			{
-				type: "input",
-				name: "officeNumber",
-				message:"Enter new team member's office number",
-			}
-		)
+		roleProperty = "office number";
+		// inquirer.prompt(
+		// 	{
+		// 		type: "input",
+		// 		name: roleProperty,
+		// 		message:"Enter new team member's " + roleProperty,
+		// 	},
+		// )
+		// let newMember = new Manager(name, id, email, roleProperty)
+		// console.log(newMember.roleProperty)
 	} else if (role === "Intern"){
-		inquirer.prompt(
-			{
-				type: "input",
-				name: "school",
-				message:"Enter new team member's school name",
-			}
-		)
+		roleProperty = "school";
+		// inquirer.prompt(
+		// 	{
+		// 		type: "input",
+		// 		name: roleProperty,
+		// 		message:"Enter new team member's " + roleProperty,
+		// 	},
+		// )
+		// let newMember = new Intern(name, id, email, roleProperty)
+		// console.log(Intern(name, id, email, roleProperty));
 	} else {
-		inquirer.prompt(
-			{
-				type: "input",
-				name: "github",
-				message:"Enter new team member's link to Github profile",
-			}
-		)
+		roleProperty = "github";
+		// inquirer.prompt(
+		// 	{
+		// 		type: "input",
+		// 		name: roleProperty,
+		// 		message:"Enter new team member's link to " + roleProperty + " profile",
+		// 	},
+		// )
+		// let newMember = new Engineer(name, id, email, roleProperty)
+		// console.log(newMember.roleProperty)
 	}
+	inquirer.prompt([
+		{
+			type: "input",
+			name: "roleProperty",
+			message: `Enter new team member's ${roleProperty}`
+		},
+		{
+			type: "confirm",
+			name: "moreMembers",
+			message: "Would you like to add more team members?"
+		}
+	])
+	.then(function(){
+		console.log(role);
+		console.log(roleProperty);
+	})
 })
