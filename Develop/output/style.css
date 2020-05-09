@@ -1,0 +1,26 @@
+.jumbotron{
+	background-color: #caab17;
+	color: #ffffff;
+	box-shadow: 0px 3px 8px rgb(201, 201, 201);
+}
+.card{
+	margin: 10px;
+	width: 250px;
+	height: auto;
+	box-shadow: 5px 5px 5px grey;
+}
+.card-body{
+	background-color: #fafafa;
+}
+#managerCardHead{
+	background-color: black;
+	color: blanchedalmond;
+}
+#engineerCardHead{
+	background-color: rgb(24, 124, 4);
+	color: rgb(236, 236, 236);
+}
+#internCardHead{
+	background-color: rgb(53, 154, 194);
+	color: rgb(0, 0, 0);
+}
