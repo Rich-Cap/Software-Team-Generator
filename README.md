@@ -1,4 +1,4 @@
-# Template-Engine-Employee-Summary
+# Software Team Generator CLI
 
 ## Purpose
 
@@ -22,11 +22,6 @@ so that I have quick access to emails and GitHub profiles
 * Use the [Inquirer npm package](https://github.com/SBoudrias/Inquirer.js/) to prompt the user for their email, id, and specific information based on their role with the company. For instance, an intern may provide their school, whereas an engineer may provide their GitHub username.
 
 * Your app will run as a Node CLI to gather information about each employee.
-
-* Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
-
-![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
-![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
 
 In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
