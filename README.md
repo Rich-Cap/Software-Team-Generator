@@ -112,9 +112,19 @@ The project must generate a `team.html` page in the `output` directory, that dis
   * Role-specific property (School, link to GitHub profile, or office number)
 
 ## Images/Content
+---
+### Unit Test GIF
+![Unit Testing](./Assets/HW-Software-Team-Generator-TESTS.gif)
 
+---
+### CLI Img
+![Team Generator CLI](./Assets/HW-Software-Team-Generator-img1.png)
 
+---
+### Browser Img
+![Team Generator CLI](./Assets/HW-Software-Team-Generator-img2.png)
 
+---
 ## Authors
 
 ```

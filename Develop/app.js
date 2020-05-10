@@ -46,17 +46,17 @@ function addMember(){
 		// Role specific properties
 		let roleProperty;
 		if (role === "Manager"){
-			roleProperty = "office number";
+			roleProperty = "office phone number";
 		} else if (role === "Intern"){
 			roleProperty = "school";
 		} else {
-			roleProperty = "github";
+			roleProperty = "github username";
 		}
 		inquirer.prompt([
 			{
 				type: "input",
 				name: "roleProperty",
-				message: `Enter new team member's ${roleProperty} username`
+				message: `Enter new team member's ${roleProperty}?`
 			},
 			{
 				type: "confirm",
